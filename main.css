@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
 .container {
@@ -17,10 +18,40 @@
 .sidepanel {
     grid-column: 1;
     grid-row: 1 / -1;
-	background-color: lightblue;
+    background-color: #0284c7;
+    color: white;
 
     display: flex;
     flex-direction: column;
+}
+
+.sidepanel-item {
+    display: flex;
+    align-items: center;
+}
+
+.sidepanel > h1 {
+    font-size: 25px;
+    margin: 0.5em 1em 2em 0;
+}
+
+.menu-items > h2 {
+    font-size: 20px;
+    margin: 0.5em 1em 0.5em 0
+}
+
+.dashboard-icon {
+    width: 2em;
+    margin: 0 0.5em 0 0.5em;
+}
+
+.menu-icon {
+    width: 1em;
+    margin: 0 1.5em 0 1.5em;
+}
+
+.sidepanel-item:nth-child(6) {
+    margin-bottom: 3em;
 }
 
 .header {
