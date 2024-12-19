@@ -58,6 +58,8 @@
     grid-column: 2;
     grid-row: 1;
     padding: 15px 15px 15px 40px;
+    box-shadow: 3px 3px 5px #cbd5e1;
+    z-index: 1;
 
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -81,7 +83,7 @@
     height: 2em;
     border: none;
     border-radius: 1em;
-    background-color: #e7e5e4;
+    background-color: #e2e8f0;
     text-align: center;
 }
 
@@ -148,7 +150,7 @@
 .main-content {
     grid-column: 2;
     grid-row: 2;
-	background-color: #e7e5e4;
+	background-color: #e2e8f0;
 	padding: 1.5em 1.5em 3em 1em;
 
     display: grid;
@@ -163,7 +165,6 @@
 
     width: 100%;
     height: 100%;
-    background-color: red;
 }
 
 .content-title {
@@ -174,14 +175,19 @@
 .cards {	
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(3, 1fr) ;
+	grid-auto-rows: 1fr;
 	gap: 15px;
 }
 
-.project-card {
+.content-board {
 	background-color: white;
-	border-radius: 5px;
+	border-radius: 7px;
 	padding: 1em;
+    box-shadow: 3px 3px 5px #cbd5e1;
+}
+
+.cards > .content-board {
+    border-left: 7px solid #fbbf24;
 }
 
 .card-text {
@@ -189,6 +195,8 @@
 }
 
 .card-actions {
+    padding: 0.5em;
+
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -204,9 +212,18 @@
     grid-row: 1;
 }
 
-.tabs-panel {
-	background-color: white;
-	border-radius: 5px;
+.tab {
+    padding: 1em 0;
+    margin: 0 1em;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.tab:last-child {
+    border: none;
+}
+
+.content-body {
+    color: #57534e;
 }
 
 .trending {
@@ -214,9 +231,15 @@
     grid-row: 2;
 }
 
-.profiles-panel {
-	background-color: white;
-	border-radius: 5px;
+.trend-profile {
+    padding: 0.5em;
+
+    display: flex;
+    align-items: center;
+}
+
+.trend-profile > img {
+    margin-right: 1em;
 }
 
 .white-icon {
